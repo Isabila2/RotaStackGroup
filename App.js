@@ -1,24 +1,19 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
-
+// IMPORT STACK NAVIGATION
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
+// Importando as páginas
 import Login from "./src/pages/Login";
 import Sobre from "./src/pages/Sobre";
 import Index from "./src/pages/Index";
 import Contato from "./src/pages/Contato";
-
+// Importando o styles
 import styles from "./src/styles/StyleSheet";
-// IMPORT STACK NAVIGATION
-import { NavigationContainer } from "@react-navigation/native";
-
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.secondaryContainer}>
-        <Login />
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
@@ -43,7 +38,5 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </View>
-    </View>
   );
 }
