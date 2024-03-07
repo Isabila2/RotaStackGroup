@@ -12,7 +12,7 @@ import Contato from "./src/pages/Contato";
 import styles from "./src/styles/StyleSheet";
 
 const Stack = createNativeStackNavigator();
-export default function App() {
+export default function Login() {
   return (
         <NavigationContainer>
           <Stack.Navigator>
