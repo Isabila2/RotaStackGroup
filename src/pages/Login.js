@@ -12,7 +12,7 @@ import styles from "../styles/StyleSheet";
 
 import { useNavigation } from "@react-navigation/native";
 
-export default function Login() {
+export default function App() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
