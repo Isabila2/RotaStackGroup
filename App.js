@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
 // IMPORT STACK NAVIGATION
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -12,7 +10,7 @@ import Contato from "./src/pages/Contato";
 import styles from "./src/styles/StyleSheet";
 
 const Stack = createNativeStackNavigator();
-export default function Login() {
+export default function App() {
   return (
         <NavigationContainer>
           <Stack.Navigator>
