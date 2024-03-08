@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 15,
     margin: 20,
-    width: "20%",
+    width: "30%",
     borderRadius: 20,
     padding: 10,
     backgroundColor: "white",
@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     height: "100%",
     width: "100%",
+  },
+  fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 });
 
