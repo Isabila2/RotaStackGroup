@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
   secondaryContainer: {
     flex: 1,
@@ -29,6 +31,8 @@ const styles = StyleSheet.create({
   img: {
     width: "100%",
     height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
   logo: {
     width: 220,
@@ -41,14 +45,28 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     borderColor: "gray",
+    backgroundColor: 'gray',
+    width: 500,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  textInput2: {
+  textIndex: {
     textAlign: "center",
     marginTop: 15,
-    width: "100%",
+    margin: 20,
+    width: "20%",
     borderRadius: 20,
     padding: 10,
-    borderColor: "red",
+    backgroundColor: "white",
+    fontSize: 19,
+  },
+  imageBackground: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    resizeMode: "cover",
+    height: "100%",
+    width: "100%",
   },
 });
 
