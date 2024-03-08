@@ -1,7 +1,10 @@
-import { View, TextInput, ImageBackground } from "react-native";
+import { View, TextInput, ImageBackground, Button, } from "react-native";
 import styles from "../styles/StyleSheet";
 
 export default function Contato() {
+  pressButton = () => {
+    alert("Sua mensagem foi enviada com sucesso!!");
+  };
   return (
     <View style={styles.container}>
       {/** Imagem de fundo e TextInputs */}
@@ -22,6 +25,7 @@ export default function Contato() {
           placeholder="Digite sua mensagem"
           multiline={true}
         />
+        <Button onPress={pressButton} title="Enviar" color="black" />
       </ImageBackground>
     </View>
   );
