@@ -1,7 +1,26 @@
-import { View, Image, Text, ImageBackground } from "react-native";
+import { View, Image, Text, ImageBackground, StyleSheet } from "react-native";
 import styles from "../styles/StyleSheet";
+import { useNavigation } from "@react-navigation/native";
+// Importando o Botão do react-native-elements para poder estilizar
+import { Button } from "react-native-elements";
+
+// Variável da estilização do botão.
+
+const style = StyleSheet.create({
+  button: {
+    backgroundColor: "grey",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "black",
+    width: 100,
+    marginTop: 100,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
 export default function SobrePages() {
+  const navigation = useNavigation();
   const imagem = {
     uri: "https://w7.pngwing.com/pngs/130/1021/png-transparent-movie-logo-movie-logo-film-tape-cinema-thumbnail.png",
   };
@@ -44,6 +63,24 @@ export default function SobrePages() {
           do cinema. Junte-se a nós nessa jornada cinematográfica e vamos
           explorar juntos a magia e o encanto das telonas!
         </Text>
+        {/** Botões para mudar de página */}
+        <View style={styles.fixToText}>
+          <Button
+            buttonStyle={style.button}
+            title="Contato"
+            onPress={() => navigation.navigate("Contato")}
+          />
+          <Button
+            buttonStyle={style.button}
+            title="Index"
+            onPress={() => navigation.navigate("Index")}
+          />
+          <Button
+            buttonStyle={style.button}
+            title="Login"
+            onPress={() => navigation.navigate("Login")}
+          />
+        </View>
       </ImageBackground>
     </View>
   );

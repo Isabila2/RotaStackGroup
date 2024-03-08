@@ -1,7 +1,26 @@
-import { View, TextInput, ImageBackground, Button, } from "react-native";
+import { View, TextInput, ImageBackground, StyleSheet } from "react-native";
 import styles from "../styles/StyleSheet";
+import { useNavigation } from "@react-navigation/native";
+// Importando o Botão do react-native-elements para poder estilizar
+import { Button } from "react-native-elements";
+
+// Variável da estilização do botão.
+
+const style = StyleSheet.create({
+  button: {
+    backgroundColor: "grey",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "black",
+    width: 100,
+    marginTop: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
 
 export default function Contato() {
+  const navigation = useNavigation();
   pressButton = () => {
     alert("Sua mensagem foi enviada com sucesso!!");
   };
@@ -26,6 +45,25 @@ export default function Contato() {
           multiline={true}
         />
         <Button onPress={pressButton} title="Enviar" color="black" />
+
+        {/** Botões para mudar de página */}
+        <View style={styles.fixToText}>
+          <Button
+            buttonStyle={style.button}
+            title="Sobre"
+            onPress={() => navigation.navigate("Sobre")}
+          />
+          <Button
+            buttonStyle={style.button}
+            title="Index"
+            onPress={() => navigation.navigate("Index")}
+          />
+          <Button
+            buttonStyle={style.button}
+            title="Login"
+            onPress={() => navigation.navigate("Login")}
+          />
+        </View>
       </ImageBackground>
     </View>
   );
